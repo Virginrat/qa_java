@@ -8,6 +8,33 @@
     <artifactId>untitled</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <dependencies>
+<<<<<<< Updated upstream
+        <!-- JUnit зависимость теперь с scope test -->
+=======
+>>>>>>> Stashed changes
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+<<<<<<< Updated upstream
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Mockito зависимость уже имеет правильный scope test -->
+=======
+            <scope>compile</scope>
+        </dependency>
+
+>>>>>>> Stashed changes
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>3.12.4</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
@@ -25,7 +52,47 @@
                     <target>11</target>
                 </configuration>
             </plugin>
+
+<<<<<<< Updated upstream
+            <!-- JaCoCo плагин теперь настроен на выполнение в фазе test для prepare-agent -->
+=======
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
+
+>>>>>>> Stashed changes
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.7</version>
+
+                <executions>
+                    <execution>
+                        <id>prepare-agent</id>
+<<<<<<< Updated upstream
+                        <phase>test</phase>
+=======
+                        <phase>initialize</phase>
+>>>>>>> Stashed changes
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+<<<<<<< Updated upstream
+                    <!-- report цель остается в фазе verify -->
+=======
+>>>>>>> Stashed changes
+                    <execution>
+                        <id>report</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
-
 </project>
