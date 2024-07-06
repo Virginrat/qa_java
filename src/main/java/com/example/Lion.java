@@ -8,10 +8,7 @@ public class Lion {
     boolean hasMane;
 
     public Lion(String sex, Feline feline) throws Exception {
-<<<<<<< Updated upstream
-=======
         this.feline = feline;
->>>>>>> Stashed changes
         if ("Самец".equals(sex)) {
             hasMane = true;
         } else if ("Самка".equals(sex)) {
